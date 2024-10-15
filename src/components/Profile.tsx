@@ -1,6 +1,13 @@
 import React from 'react';
 
-const Profile = ({ user }) => {
+interface ProfileProps {
+  user: {
+    name: string;
+    bio: string;
+  };
+}
+
+const Profile: React.FC<ProfileProps> = ({ user }) => {
   return (
     <div className="p-4 border rounded">
       <h2 className="text-xl font-bold">{user.name}</h2>
